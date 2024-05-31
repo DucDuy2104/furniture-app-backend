@@ -1,3 +1,4 @@
+
 const Product = `
     type Product {
         productId: Int!
@@ -10,6 +11,7 @@ const Product = `
         categoryId: Int!
         createdAt: String!
         updatedAt: String!
+        category: Category!
     }
 `
 

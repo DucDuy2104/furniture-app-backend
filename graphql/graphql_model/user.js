@@ -28,7 +28,7 @@ const userInput = `
 `
 
 const userMutation = `
-    userRegister(registerInput: RegisterInput) : User!
+    userRegister(registerInput: RegisterInput) : Boolean!
     userLogin(loginInput: LoginInput) : User!
 `
 

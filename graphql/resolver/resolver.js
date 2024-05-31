@@ -1,9 +1,13 @@
-const { userController, categoryController, productController,favoritesController } = require('../../controller')
+const { userController, categoryController, productController, favoritesController,
+    cartController, orderController
+ } = require('../../controller')
 
 
 module.exports = {
     ...userController,
     ...categoryController,
     ...productController,
-    ...favoritesController
+    ...favoritesController,
+    ...cartController,
+    ...orderController
 }

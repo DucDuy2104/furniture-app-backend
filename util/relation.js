@@ -28,8 +28,8 @@ module.exports = () => {
     Order.belongsTo(User, { foreignKey: 'userId' })
 
     //order vs product
-    Order.belongsToMany(Product, { through: OrderItem })
-    Product.belongsToMany(Order, { through: OrderItem })
+    Order.belongsToMany(Product, { through: OrderItem, foreignKey: 'orderId'})
+    Product.belongsToMany(Order, { through: OrderItem, foreignKey: 'productId'})
 
     //product vs review
     Product.hasMany(Review, { foreignKey: 'productId' })

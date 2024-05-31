@@ -6,6 +6,7 @@ const OrderItem = `
         productId: Int!
         createdAt: String!
         updatedAt: String!
+        product: Product
     }
 `
 

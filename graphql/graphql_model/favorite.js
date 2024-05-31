@@ -5,6 +5,7 @@ const Favorite = `
         productId: Int!
         createdAt: String!
         updatedAt: String!
+        product: Product!
     }
 `
 
@@ -14,13 +15,21 @@ const favoriteInput = `
         userId: Int!
         productId: Int!
     }
-`
+    input DeleteFavoriteInput {
+        favoriteId: Int!
+    }
+    input getFavoriteByUserId {
+        userId: Int!
+    }
+ `
 
 
 const favoriteMutation = `
     createFavorite(createFavoriteInput: CreateFavoriteInput) : Favorite!
+    deleteFavorite(deleteFavoriteInput: DeleteFavoriteInput) : Favorite!
 `
 
 const favoriteQuery = `
+    getFavoriteByUserId(getFavoriteByUserId: getFavoriteByUserId) : [Favorite]!
 `
 module.exports = { Favorite, favoriteInput, favoriteMutation, favoriteQuery};

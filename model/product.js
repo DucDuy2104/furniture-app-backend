@@ -31,6 +31,10 @@ const Product = sequelize.define("Product", {
     price: {
         type: Sequelize.FLOAT,
         allowNull: false
+    },
+    categoryId: {
+        type: Sequelize.INTEGER,
+        allowNull: false
     }
 
 },
