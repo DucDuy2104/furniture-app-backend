@@ -49,7 +49,7 @@ module.exports = {
     deleteCart: async ({ deleteCartInput }, req) => {
         try {
             const { cartId } = deleteCartInput
-            const cart = await Cart.findOne({ cartId: cartId })
+            const cart = await Cart.findOne({where: { cartId: cartId}})
             const product = await Product.findByPk(cart.productId)
             if (!cart) {
                 throw new Error('Cart not found')
