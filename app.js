@@ -6,6 +6,7 @@ require('dotenv').config()
 const path = require('path')
 
 const XLSX = require('xlsx')
+var logger = require('morgan')
 
 const relationships = require('./util/relation');
 
@@ -18,6 +19,7 @@ const graphqlResolver = require('./graphql/resolver/resolver')
 
 app.use(express.json());
 app.use(express.static('public'))
+app.use(logger('dev'))
 
 
 
